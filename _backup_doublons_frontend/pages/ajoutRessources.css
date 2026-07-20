@@ -1,0 +1,628 @@
+/* ============================================
+   AjoutRessources.css — Style page ressources
+   ============================================ */
+
+/* Page principale */
+.ressources-page {
+  min-height: 100vh;
+  background: #F9FAFB;
+}
+
+/* ── EN-TÊTE ────────────────────────────────── */
+.ressources-header {
+  background: white;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.ressources-header-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ressources-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1F2937;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ressources-header h1 i {
+  color: #10B981;
+  font-size: 1.8rem;
+}
+
+.ressources-header p {
+  color: #6B7280;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.btn-retour {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #F3F4F6;
+  color: #374151;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.btn-retour:hover {
+  background: #E5E7EB;
+}
+
+/* ── CONTENU PRINCIPAL ─────────────────────── */
+.ressources-container {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+/* ── SÉLECTION DU COURS ────────────────────── */
+.cours-selector {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.cours-selector label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 12px;
+}
+
+.cours-selector label i {
+  color: #10B981;
+  font-size: 1.3rem;
+}
+
+.cours-selector select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #E5E7EB;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #1F2937;
+  background: #F9FAFB;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  appearance: none;
+}
+
+.cours-selector select:focus {
+  border-color: #10B981;
+  background: white;
+}
+
+/* Badges infos cours */
+.cours-infos-badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.info-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #ECFDF5;
+  color: #059669;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* ── ONGLETS ────────────────────────────────── */
+.onglets {
+  display: flex;
+  gap: 4px;
+  background: white;
+  border-radius: 12px;
+  padding: 6px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.onglet {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #6B7280;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.onglet:hover {
+  background: #F3F4F6;
+  color: #374151;
+}
+
+.onglet.active {
+  background: #10B981;
+  color: white;
+  font-weight: 600;
+}
+
+.badge-count {
+  background: white;
+  color: #10B981;
+  border-radius: 20px;
+  padding: 1px 7px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* ── CONTENU ONGLET ────────────────────────── */
+.onglet-content {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+/* ── FORMULAIRES ───────────────────────────── */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper i {
+  position: absolute;
+  left: 14px;
+  color: #9CA3AF;
+  font-size: 1rem;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  border: 2px solid #E5E7EB;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #1F2937;
+  background: #F9FAFB;
+  transition: border-color 0.3s;
+  outline: none;
+  appearance: none;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+  border-color: #10B981;
+  background: white;
+}
+
+.input-wrapper input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #E5E7EB;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #1F2937;
+  background: #F9FAFB;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.3s;
+  font-family: inherit;
+}
+
+textarea:focus {
+  border-color: #10B981;
+  background: white;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.warning-text {
+  color: #F59E0B;
+  font-size: 0.82rem;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ── SÉLECTEUR DE TYPE ─────────────────────── */
+.type-selector {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.type-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 16px;
+  border: 2px solid #E5E7EB;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #6B7280;
+  min-width: 70px;
+}
+
+.type-option i {
+  font-size: 1.5rem;
+}
+
+.type-option span {
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.type-option:hover {
+  border-color: #10B981;
+  color: #10B981;
+}
+
+.type-option.active {
+  border-color: #10B981;
+  background: #ECFDF5;
+  color: #059669;
+}
+
+/* ── CHECKBOX LABEL ────────────────────────── */
+.checkbox-label {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 500 !important;
+}
+
+.checkbox-label input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #10B981;
+}
+
+.checkbox-label span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── BOUTON AJOUTER ────────────────────────── */
+.btn-ajouter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #10B981, #059669);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 8px;
+}
+
+.btn-ajouter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16,185,129,0.4);
+}
+
+.btn-ajouter:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Spinner */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── INFO SECTION ───────────────────────────── */
+.section-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #EFF6FF;
+  color: #3B82F6;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* ── LISTE SECTIONS ────────────────────────── */
+.sections-liste {
+  margin-top: 24px;
+}
+
+.sections-liste h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+.section-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #F9FAFB;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.section-numero {
+  width: 28px;
+  height: 28px;
+  background: #10B981;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.section-titre {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* ── LISTE RESSOURCES ──────────────────────── */
+.ressources-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ressource-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: #F9FAFB;
+  border-radius: 10px;
+  border: 1px solid #E5E7EB;
+  transition: border-color 0.3s;
+}
+
+.ressource-item:hover {
+  border-color: #10B981;
+}
+
+.ressource-icon {
+  width: 42px;
+  height: 42px;
+  background: #ECFDF5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #10B981;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.ressource-info {
+  flex: 1;
+}
+
+.ressource-info h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 4px;
+}
+
+.ressource-type {
+  font-size: 0.78rem;
+  background: #E5E7EB;
+  color: #6B7280;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-right: 6px;
+}
+
+.ressource-duree {
+  font-size: 0.78rem;
+  color: #6B7280;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.badge-gratuit {
+  background: #ECFDF5;
+  color: #059669;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.btn-supprimer {
+  background: #FEE2E2;
+  color: #DC2626;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.btn-supprimer:hover {
+  background: #DC2626;
+  color: white;
+}
+
+/* ── ÉTAT VIDE ──────────────────────────────── */
+.empty-state {
+  text-align: center;
+  padding: 48px 0;
+  color: #9CA3AF;
+}
+
+.empty-state i {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.empty-state p {
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+/* ── ALERTS ─────────────────────────────────── */
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+.alert button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: inherit;
+  opacity: 0.7;
+}
+
+.alert-error {
+  background: #FEE2E2;
+  color: #DC2626;
+  border-left: 4px solid #DC2626;
+}
+
+.alert-success {
+  background: #D1FAE5;
+  color: #059669;
+  border-left: 4px solid #059669;
+}
+
+/* ── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 768px) {
+  .ressources-header-content {
+    flex-wrap: wrap;
+  }
+
+  .onglets {
+    flex-wrap: wrap;
+  }
+
+  .onglet {
+    flex: unset;
+    font-size: 0.82rem;
+    padding: 8px 12px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .type-selector {
+    gap: 6px;
+  }
+
+  .type-option {
+    min-width: 60px;
+    padding: 10px 12px;
+  }
+}
+/* ── AJOUTS — États cours vide/chargement ── */
+.loading-inline {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px; background: #F9FAFB; border-radius: 10px;
+  color: #6B7280; font-size: 0.9rem;
+}
+.mini-spinner {
+  width: 16px; height: 16px; border: 2px solid #E5E7EB;
+  border-top-color: #10B981; border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+.empty-cours-warning {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 16px; background: #FEF3C7; color: #92400E;
+  border-radius: 10px; font-size: 0.9rem; border-left: 4px solid #F59E0B;
+}
+.empty-cours-warning i { font-size: 1.3rem; flex-shrink: 0; }

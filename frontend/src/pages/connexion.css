@@ -1,0 +1,36 @@
+.connexion-page {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); padding: 20px;
+}
+.connexion-card {
+  background: white; border-radius: 20px; padding: 40px; width: 100%;
+  max-width: 420px; box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+.connexion-header { text-align: center; margin-bottom: 28px; }
+.connexion-logo { font-size: 3rem; color: #4F46E5; margin-bottom: 10px; }
+.connexion-header h1 { font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 4px; }
+.connexion-header p { color: #6B7280; font-size: 0.95rem; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-size: 0.9rem; font-weight: 600; color: #374151; margin-bottom: 6px; }
+.input-wrapper { position: relative; display: flex; align-items: center; }
+.input-wrapper i { position: absolute; left: 14px; color: #9CA3AF; font-size: 1rem; }
+.input-wrapper input {
+  width: 100%; padding: 12px 14px 12px 42px; border: 2px solid #E5E7EB;
+  border-radius: 10px; font-size: 0.95rem; color: #1F2937; background: #F9FAFB;
+  transition: border-color 0.3s; outline: none;
+}
+.input-wrapper input:focus { border-color: #4F46E5; background: white; }
+.toggle-password { position: absolute; right: 14px; background: none; border: none; cursor: pointer; color: #9CA3AF; font-size: 1rem; padding: 0; }
+.toggle-password:hover { color: #4F46E5; }
+.btn-connexion {
+  width: 100%; padding: 13px; background: linear-gradient(135deg, #4F46E5, #7C3AED);
+  color: white; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600;
+  cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 8px;
+}
+.btn-connexion:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(79,70,229,0.4); }
+.btn-connexion:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+.connexion-footer { text-align: center; margin-top: 20px; font-size: 0.9rem; color: #6B7280; }
+.connexion-footer a { color: #4F46E5; font-weight: 600; }
+.alert { display: flex; align-items: center; gap: 8px; padding: 12px 14px; border-radius: 8px; margin-bottom: 16px; font-size: 0.88rem; }
+.alert-error { background: #FEE2E2; color: #DC2626; border-left: 4px solid #DC2626; }
+@media (max-width: 480px) { .connexion-card { padding: 28px 20px; } }

@@ -1,0 +1,538 @@
+/* ============================================
+   CreationCours.css — Style page création cours
+   ============================================ */
+
+/* Page principale */
+.creation-page {
+  min-height: 100vh;
+  background: #F9FAFB;
+}
+
+/* ── EN-TÊTE ────────────────────────────────── */
+.creation-header {
+  background: white;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.creation-header-content {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-retour {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #F3F4F6;
+  color: #374151;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.btn-retour:hover {
+  background: #E5E7EB;
+}
+
+.creation-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1F2937;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.creation-header h1 i {
+  color: #4F46E5;
+  font-size: 1.8rem;
+}
+
+.creation-header p {
+  color: #6B7280;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* ── INDICATEUR D'ÉTAPES ───────────────────── */
+.etapes {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.etape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.etape span {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #E5E7EB;
+  color: #9CA3AF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.etape.active span {
+  background: #4F46E5;
+  color: white;
+  box-shadow: 0 0 0 4px rgba(79,70,229,0.2);
+}
+
+.etape p {
+  font-size: 0.78rem;
+  color: #9CA3AF;
+  font-weight: 500;
+}
+
+.etape.active p {
+  color: #4F46E5;
+  font-weight: 600;
+}
+
+.etape-ligne {
+  width: 80px;
+  height: 2px;
+  background: #E5E7EB;
+  margin-bottom: 20px;
+}
+
+/* ── CONTENU PRINCIPAL ─────────────────────── */
+.creation-container {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+/* ── CONTENU DE CHAQUE ÉTAPE ───────────────── */
+.etape-content {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.etape-content h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.etape-content h2 i {
+  color: #4F46E5;
+  font-size: 1.5rem;
+}
+
+/* ── GROUPES DE CHAMPS ─────────────────────── */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.required {
+  color: #EF4444;
+  margin-left: 4px;
+}
+
+/* Input avec icône */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper i {
+  position: absolute;
+  left: 14px;
+  color: #9CA3AF;
+  font-size: 1rem;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  border: 2px solid #E5E7EB;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #1F2937;
+  background: #F9FAFB;
+  transition: border-color 0.3s;
+  outline: none;
+  appearance: none;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+  border-color: #4F46E5;
+  background: white;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #E5E7EB;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #1F2937;
+  background: #F9FAFB;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.3s;
+  font-family: inherit;
+}
+
+textarea:focus {
+  border-color: #4F46E5;
+  background: white;
+}
+
+.form-group small {
+  color: #9CA3AF;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ── SÉLECTEUR DE NIVEAU ───────────────────── */
+.niveau-selector {
+  display: flex;
+  gap: 12px;
+}
+
+.niveau-option {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #6B7280;
+}
+
+.niveau-option i {
+  font-size: 1.8rem;
+}
+
+.niveau-option span {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.niveau-option:hover {
+  border-color: #4F46E5;
+  color: #4F46E5;
+}
+
+.niveau-option.active {
+  border-color: #4F46E5;
+  background: #EEF2FF;
+  color: #4F46E5;
+}
+
+/* ── 2 CHAMPS CÔTE À CÔTE ──────────────────── */
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* ── APERÇU IMAGE ──────────────────────────── */
+.image-preview {
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 160px;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* ── RÉSUMÉ DU COURS ───────────────────────── */
+.cours-resume {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.cours-resume h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 14px;
+}
+
+.resume-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #E5E7EB;
+  font-size: 0.9rem;
+}
+
+.resume-item:last-child {
+  border-bottom: none;
+}
+
+.resume-item span {
+  color: #6B7280;
+}
+
+.resume-item strong {
+  color: #1F2937;
+  text-transform: capitalize;
+}
+
+/* ── OPTIONS DE PUBLICATION ────────────────── */
+.options-publication {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.option-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  transition: border-color 0.3s;
+}
+
+.option-card:hover {
+  border-color: #4F46E5;
+}
+
+.option-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.option-info i {
+  font-size: 1.8rem;
+  color: #4F46E5;
+}
+
+.option-info h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.option-info p {
+  font-size: 0.82rem;
+  color: #6B7280;
+  margin-top: 2px;
+}
+
+/* ── TOGGLE SWITCH ─────────────────────────── */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  inset: 0;
+  background: #D1D5DB;
+  border-radius: 26px;
+  transition: 0.3s;
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.toggle input:checked + .toggle-slider {
+  background: #4F46E5;
+}
+
+.toggle input:checked + .toggle-slider::before {
+  transform: translateX(22px);
+}
+
+/* ── BOUTONS NAVIGATION ────────────────────── */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.btn-suivant {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #4F46E5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-left: auto;
+}
+
+.btn-suivant:hover {
+  background: #3730A3;
+  transform: translateY(-2px);
+}
+
+.btn-precedent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #F3F4F6;
+  color: #374151;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-precedent:hover {
+  background: #E5E7EB;
+}
+
+.btn-publier {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #10B981, #059669);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-publier:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16,185,129,0.4);
+}
+
+.btn-publier:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Spinner */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 768px) {
+  .creation-header-content {
+    flex-wrap: wrap;
+  }
+
+  .etape-ligne { width: 40px; }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .niveau-selector {
+    flex-direction: column;
+  }
+
+  .etape-content {
+    padding: 20px;
+  }
+
+  .btn-group {
+    flex-direction: column-reverse;
+  }
+
+  .btn-suivant { margin-left: 0; }
+}

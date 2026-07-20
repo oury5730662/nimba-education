@@ -1,0 +1,709 @@
+/* ============================================
+   suivreCours.css — Page de suivi d'un cours
+   ============================================ */
+
+.suivre-page {
+  min-height: 100vh;
+  background: #F9FAFB;
+}
+
+/* ── EN-TÊTE ─────────────────────────────────── */
+.suivre-header {
+  background: white;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 20px 32px;
+}
+
+.suivre-header-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.btn-retour {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: #F3F4F6;
+  border: none;
+  border-radius: 10px;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-retour:hover {
+  background: #E5E7EB;
+}
+
+.suivre-titre h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+.suivre-titre p {
+  color: #6B7280;
+  font-size: 0.92rem;
+  margin-top: 4px;
+  max-width: 720px;
+}
+
+/* ── BARRE DE PROGRESSION GLOBALE ────────────── */
+.progression-globale {
+  max-width: 1400px;
+  margin: 16px auto 0;
+}
+
+.progression-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.progression-infos span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #6B7280;
+  font-weight: 600;
+}
+
+.progression-infos strong {
+  color: #4F46E5;
+  font-size: 1.05rem;
+}
+
+.progression-barre {
+  height: 10px;
+  background: #E5E7EB;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progression-remplie {
+  height: 100%;
+  background: linear-gradient(90deg, #4F46E5, #7C3AED);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+/* ── ENCART CERTIFICATION ────────────────────── */
+.encart-certification {
+  max-width: 1400px;
+  margin: 16px auto 0;
+  padding: 18px 22px;
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 14px;
+}
+
+.certification-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.certification-header i {
+  font-size: 1.3rem;
+  color: #7C3AED;
+}
+
+.certification-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  flex: 1;
+}
+
+.certification-conditions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.condition-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #6B7280;
+}
+
+.condition-item i {
+  font-size: 1.1rem;
+  color: #D1D5DB;
+}
+
+.condition-item.ok {
+  background: #ECFDF5;
+  border-color: #A7F3D0;
+  color: #059669;
+}
+
+.condition-item.ok i {
+  color: #10B981;
+}
+
+.btn-obtenir-certificat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #7C3AED, #6D28D9);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-obtenir-certificat:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
+}
+
+.btn-obtenir-certificat:disabled {
+  background: #E5E7EB;
+  color: #9CA3AF;
+  cursor: not-allowed;
+}
+
+.badge-en-attente-validation {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background: #FEF3C7;
+  color: #B45309;
+  border-radius: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.alert-refus-certificat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  background: #FEE2E2;
+  color: #DC2626;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.alert-refus-certificat i {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ── MESSAGE D'ERREUR ────────────────────────── */
+.suivre-page .alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 1400px;
+  margin: 16px auto 0;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.suivre-page .alert-error {
+  background: #FEE2E2;
+  color: #DC2626;
+}
+
+.suivre-page .alert button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+}
+
+/* ── CONTENU : SIDEBAR + PANNEAU ─────────────── */
+.suivre-container {
+  display: flex;
+  gap: 24px;
+  max-width: 1400px;
+  margin: 24px auto;
+  padding: 0 32px;
+  align-items: flex-start;
+}
+
+/* ── SIDEBAR ─────────────────────────────────── */
+.suivre-sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 14px;
+  padding: 18px;
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.suivre-sidebar h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 14px;
+}
+
+.sidebar-section {
+  margin-bottom: 14px;
+}
+
+.sidebar-section-titre {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: #374151;
+  font-size: 0.92rem;
+  padding: 8px 6px;
+  border-bottom: 1px solid #F3F4F6;
+  margin-bottom: 6px;
+}
+
+.section-numero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: #EEF2FF;
+  color: #4F46E5;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.sidebar-ressource {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 10px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  color: #4B5563;
+  font-size: 0.88rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.sidebar-ressource:hover {
+  background: #F3F4F6;
+}
+
+.sidebar-ressource.active {
+  background: #EEF2FF;
+  color: #4F46E5;
+  font-weight: 600;
+}
+
+.sidebar-ressource i {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.sidebar-ressource-titre {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.coche-terminee {
+  color: #10B981 !important;
+}
+
+.sidebar-vide {
+  color: #9CA3AF;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+}
+
+/* ── PANNEAU PRINCIPAL ───────────────────────── */
+.suivre-panneau {
+  flex: 1;
+  min-width: 0;
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.panneau-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.panneau-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: #EEF2FF;
+  color: #4F46E5;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.panneau-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.panneau-header p {
+  color: #6B7280;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.badge-terminee {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background: #D1FAE5;
+  color: #059669;
+  border-radius: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── SUIVI DE LECTURE (image/pdf/document/lien) ──────── */
+.suivi-lecture {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 220px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.suivi-lecture-barre {
+  height: 5px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.suivi-lecture-remplie {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+  background: currentColor;
+}
+
+.suivi-lecture-texte {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.suivi-attente {
+  background: #F3F4F6;
+  color: #6B7280;
+}
+
+.suivi-active {
+  background: #FEF3C7;
+  color: #B45309;
+}
+
+.suivi-pause {
+  background: #FEE2E2;
+  color: #DC2626;
+}
+
+.spinner-mini {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(180, 83, 9, 0.25);
+  border-top-color: #B45309;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+/* ── TOAST DE NOTIFICATION (bas droite) ──────── */
+.toast-notification {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: #111827;
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+  animation: toast-in 0.3s ease;
+}
+
+.toast-notification i {
+  color: #34D399;
+  font-size: 1.2rem;
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── CONTENU DE LA RESSOURCE ─────────────────── */
+.panneau-contenu {
+  margin-bottom: 20px;
+}
+
+.lecteur-video {
+  width: 100%;
+  max-height: 480px;
+  background: #111827;
+  border-radius: 12px;
+}
+
+.ressource-fichier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 48px 24px;
+  background: #F9FAFB;
+  border: 2px dashed #E5E7EB;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.ressource-fichier > i {
+  font-size: 3rem;
+  color: #4F46E5;
+}
+
+.ressource-fichier p {
+  color: #374151;
+  font-weight: 600;
+}
+
+/* ── PDF INTÉGRÉ ──────────────────────────────── */
+.ressource-pdf {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.visionneuse-pdf {
+  width: 100%;
+  height: 600px;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  background: #F9FAFB;
+}
+
+.lien-secondaire {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-end;
+  color: #6B7280;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.lien-secondaire:hover {
+  color: #4F46E5;
+}
+
+.btn-ouvrir {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  background: #4F46E5;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-ouvrir:hover {
+  background: #4338CA;
+}
+
+.ressource-image {
+  display: flex;
+  justify-content: center;
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.ressource-image img {
+  max-width: 100%;
+  max-height: 480px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* ── NAVIGATION PRÉCÉDENT / SUIVANT ──────────── */
+.panneau-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid #F3F4F6;
+}
+
+.btn-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: #F3F4F6;
+  border: none;
+  border-radius: 10px;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-nav:hover:not(:disabled) {
+  background: #EEF2FF;
+  color: #4F46E5;
+}
+
+.btn-nav:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.nav-position {
+  color: #9CA3AF;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ── ÉTATS VIDES / CHARGEMENT ────────────────── */
+.suivre-page .empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 60px 20px;
+  color: #9CA3AF;
+}
+
+.suivre-page .empty-state i {
+  font-size: 3rem;
+}
+
+.suivre-page .loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 100px 20px;
+  color: #6B7280;
+}
+
+.suivre-page .loading-spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid #E5E7EB;
+  border-top-color: #4F46E5;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.suivre-page .spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 900px) {
+  .suivre-container {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .suivre-sidebar {
+    width: 100%;
+    position: static;
+    max-height: none;
+  }
+
+  .suivre-header {
+    padding: 16px;
+  }
+
+  .suivre-header-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .panneau-header {
+    flex-direction: column;
+  }
+}

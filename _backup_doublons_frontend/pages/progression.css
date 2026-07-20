@@ -1,0 +1,403 @@
+/* ============================================
+   Progression.css — Style page Progression
+   ============================================ */
+
+.progression-page {
+  min-height: 100vh;
+  background: #F9FAFB;
+}
+
+/* ── EN-TÊTE ── */
+.progression-header {
+  background: white;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.progression-header-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.progression-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1F2937;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progression-header h1 i {
+  color: #10B981;
+  font-size: 1.8rem;
+}
+
+.progression-header p {
+  color: #6B7280;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* ── CONTENEUR ── */
+.progression-container {
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+/* ── LAYOUT ── */
+.progression-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ── LISTE DES COURS ── */
+.cours-liste {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.cours-liste h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #E5E7EB;
+}
+
+/* Item cours */
+.cours-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 10px;
+  border: 2px solid transparent;
+}
+
+.cours-item:hover {
+  background: #F9FAFB;
+  border-color: #E5E7EB;
+}
+
+.cours-item.actif {
+  background: #EFF6FF;
+  border-color: #4F46E5;
+}
+
+/* Image placeholder */
+.cours-item-image {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, #EEF2FF, #E0E7FF);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4F46E5;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.cours-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cours-item-info h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Badges statut */
+.statut-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.statut-en_cours  { color: #4F46E5; }
+.statut-termine   { color: #10B981; }
+.statut-abandonne { color: #F59E0B; }
+
+/* Barre de progression */
+.progress-bar-container {
+  width: 100%;
+  height: 6px;
+  background: #E5E7EB;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.progress-bar-container.large {
+  height: 10px;
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.progress-pct {
+  font-size: 0.75rem;
+  color: #6B7280;
+  font-weight: 600;
+}
+
+.cours-item i.bx-chevron-right {
+  color: #9CA3AF;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ── DÉTAIL DU COURS ── */
+.cours-detail {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  min-height: 400px;
+}
+
+.cours-detail h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 16px;
+}
+
+/* État vide détail */
+.empty-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #9CA3AF;
+  text-align: center;
+  gap: 12px;
+}
+
+.empty-detail i {
+  font-size: 3rem;
+}
+
+.empty-detail p {
+  font-size: 0.95rem;
+}
+
+/* Progression globale */
+.progression-globale {
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progression-globale span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.pct-label {
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  color: #10B981 !important;
+}
+
+/* ── RESSOURCES PROGRESSION ── */
+.ressources-progression {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ressource-prog-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: #F9FAFB;
+  border-radius: 10px;
+  border: 1px solid #E5E7EB;
+  transition: border-color 0.3s;
+}
+
+.ressource-prog-item:hover {
+  border-color: #10B981;
+}
+
+.ressource-prog-icon {
+  width: 40px;
+  height: 40px;
+  background: #ECFDF5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #10B981;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.ressource-prog-info {
+  flex: 1;
+}
+
+.ressource-prog-info h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 3px;
+}
+
+.ressource-prog-info span {
+  font-size: 0.75rem;
+  color: #6B7280;
+  text-transform: capitalize;
+}
+
+/* Bouton marquer vue */
+.btn-marquer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 12px;
+  background: #ECFDF5;
+  color: #059669;
+  border: 1px solid #10B981;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.btn-marquer:hover {
+  background: #10B981;
+  color: white;
+}
+
+/* ── BOUTONS ── */
+.btn-retour {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #F3F4F6;
+  color: #374151;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.btn-retour:hover { background: #E5E7EB; }
+
+.btn-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #4F46E5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 12px;
+}
+
+.btn-action:hover {
+  background: #3730A3;
+  transform: translateY(-2px);
+}
+
+/* ── LOADING ── */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 60px 0;
+  color: #6B7280;
+}
+
+.loading-spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid #E5E7EB;
+  border-top-color: #10B981;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── ÉTAT VIDE ── */
+.empty-state {
+  text-align: center;
+  padding: 48px 0;
+  color: #9CA3AF;
+}
+
+.empty-state i {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.empty-state h3 {
+  font-size: 1rem;
+  color: #6B7280;
+  margin-bottom: 6px;
+}
+
+.empty-state p {
+  font-size: 0.88rem;
+  margin-bottom: 16px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .progression-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .progression-header-content { flex-wrap: wrap; }
+}
