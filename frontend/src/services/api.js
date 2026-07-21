@@ -1,8 +1,8 @@
 // Service API — Axios configuré pour le backend Spring Boot
 import axios from 'axios'
 
-const API_URL = 'http://localhost:8080/api'
-export const BACKEND_URL = 'http://localhost:8080'
+export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8080'
+const API_URL = `${BACKEND_URL}/api`
 
 // Transforme une URL relative du backend (ex: /uploads/covers/x.jpg)
 // en URL absolue ; laisse les URLs http(s) intactes
